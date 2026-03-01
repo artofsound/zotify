@@ -901,7 +901,7 @@ class Track(DLContent):
         if not Zotify.CONFIG.get_album_art_jpg_file() or img is None or not parent_stack:
             return
         jpg_album_cover_path = filepath.parent / 'cover.jpg'
-        jpg_single_path = filepath.parent / filepath.stem + '.jpg'
+        jpg_single_path = filepath.parent / 'cover.jpg'
         Printer.logger(f"Album Art Detected: {Path(jpg_album_cover_path).exists()}\n" +
                        f"Single Art Detected: {Path(jpg_single_path).exists()}", PrintChannel.DEBUG)
         if Path(jpg_album_cover_path).exists() or Path(jpg_single_path).exists():
